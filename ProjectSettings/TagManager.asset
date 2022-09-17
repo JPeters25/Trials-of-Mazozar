@@ -47,3 +47,6 @@ TagManager:
   - name: Actor
     uniqueID: 1682818417
     locked: 0
+  - name: Design
+    uniqueID: 4136277747
+    locked: 0
