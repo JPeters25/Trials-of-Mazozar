@@ -770,7 +770,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_bank
+      name: blank_floor
       rect:
         serializedVersion: 2
         x: 32
@@ -1697,7 +1697,7 @@ TextureImporter:
       name: player_0
       rect:
         serializedVersion: 2
-        x: 176
+        x: 177
         y: 0
         width: 16
         height: 16
@@ -1718,7 +1718,7 @@ TextureImporter:
       name: player_1
       rect:
         serializedVersion: 2
-        x: 160
+        x: 161
         y: 0
         width: 16
         height: 16
@@ -1983,6 +1983,7 @@ TextureImporter:
       pipeWall_1: 364341058
       pillar_4: -1763521631
       player_8: 813083302
+      blank_floor: -1736921190
       wallShadow_6: -188562360
       pipeWall_2: -1591946188
       wallShadow_1: 1076948623
@@ -2033,9 +2034,8 @@ TextureImporter:
       player_9: 1700176425
       wallShadow_12: 1052079151
       floor_1: 1382766862
-      floor_bank: -1736921190
-      tile_dark: 1297371971
       wall_4: -183825430
+      tile_dark: 1297371971
       player_10: 1113240591
       pillar_0: -195209265
       Atlas_0: 1483806183
