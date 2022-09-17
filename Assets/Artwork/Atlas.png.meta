@@ -2682,9 +2682,11 @@ TextureImporter:
       healthFountain_1: 1982269902
       wall_3: 1089237641
       enemy_4: 279337358
+      Atlas_1: 2107266730
       enemy_21: 29337515
       crate_2: -377147960
       torch_6: 1681441741
+      fountain_top: 1299740062
       pipeWall_0: -1769374897
       floor_2: 1947174784
       floor_10: -1497463310
@@ -2787,6 +2789,7 @@ TextureImporter:
       enemy_24: -737021257
       enemy_23: -765283454
       pillar_0: -195209265
+      Atlas_0: 837188649
       wallShadow_5: 759742934
       enemy_13: -1186193501
       wallShadow_9: 1148437139
