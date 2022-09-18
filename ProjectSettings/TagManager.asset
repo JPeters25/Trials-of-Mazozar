@@ -50,3 +50,6 @@ TagManager:
   - name: Design
     uniqueID: 4136277747
     locked: 0
+  - name: Interactable
+    uniqueID: 430393821
+    locked: 0
