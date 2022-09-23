@@ -6537,6 +6537,7 @@ MonoBehaviour:
   weaponPrices: 
   xpTable: 
   player: {fileID: 0}
+  floatingTextManager: {fileID: 0}
   gold: 0
   experience: 0
 --- !u!4 &1118242896
@@ -49222,7 +49223,6 @@ MonoBehaviour:
     maxNormalAngle: 0
   sceneNames:
   - Dungeon1
-  - Main
 --- !u!61 &1970812599
 BoxCollider2D:
   m_ObjectHideFlags: 0
