@@ -19,7 +19,8 @@ Capstone Project- 2D Top Down RPG Dungeon Crawler
 
 #### Friday, 09/23
 * 8:00: Worked on pixel art
-* 10:38 Began working on game in Unity
+* 10:38: Began working on game in Unity
+* 3:42: Started pixel art
 
 
 
