@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+        
+        // Restarting Game
+        // PlayerPrefs.DeleteAll();
 
         instance = this;
         SceneManager.sceneLoaded += LoadState;
@@ -35,13 +38,36 @@ public class GameManager : MonoBehaviour
     public int experience;
     
     // Save State
+    /*
+     * INT preferedSkin
+     * INT gold
+     * INT experience
+     * INT weaponLevel
+     */
     public void SaveState()
     {
-        Debug.Log("SaveState");
+        string s = "";
+
+        s += "0" + "|";
+        s += gold.ToString() + "|";
+        s += experience.ToString() + "|";
+        s += "0";
+
+        PlayerPrefs.SetString("SaveState", s);
     }
 
     public void LoadState(Scene s, LoadSceneMode mode)
     {
+        if (!PlayerPrefs.HasKey("SaveState"))
+            return;
+
+        string[] data = PlayerPrefs.GetString("SaveState").Split('|');
+
+        // Change player skin
+        gold = int.Parse(data[1]);
+        experience = int.Parse(data[2]);
+        // CHange the weapon level
+
         Debug.Log("LoadState");
     }
 }
