@@ -14,5 +14,34 @@ public class CharacterMenu : MonoBehaviour
     public Image weaponSprite;
     public RectTransform xpBar;
 
+    // Character Selection
+    public void OnArrowClick(bool right)
+    {
+        if (right)
+        {
+            currentCharacterSelection++;
 
+            // If we went too far away
+            if (currentCharacterSelection == GameManager.instance.playerSprites.Count)
+                currentCharacterSelection = 0;
+
+            OnSelectionChanged();
+        }
+        else
+        {
+            currentCharacterSelection--;
+
+            // If we went too far away
+            if (currentCharacterSelection < 0)
+                currentCharacterSelection = GameManager.instance.playerSprites.Count -1;
+
+            OnSelectionChanged();
+        }
+    }
+    private void OnSelectionChanged()
+    {
+        characterSelectionSprite.sprite = GameManager.instance.playerSprites[currentCharacterSelection];
+    }
+
+    // Weapon Upgrade
 }
