@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CharacterMenu : MonoBehaviour
 {
     // Text fields
-    public Text levelText, hitpointText, pesosText, upgradeCostText, xpText;
+    public Text levelText, hitpointText, goldText, upgradeCostText, xpText;
 
     // Logic
     private int currentCharacterSelection = 0;
@@ -33,7 +33,7 @@ public class CharacterMenu : MonoBehaviour
 
             // If we went too far away
             if (currentCharacterSelection < 0)
-                currentCharacterSelection = GameManager.instance.playerSprites.Count -1;
+                currentCharacterSelection = GameManager.instance.playerSprites.Count - 1;
 
             OnSelectionChanged();
         }
@@ -44,4 +44,25 @@ public class CharacterMenu : MonoBehaviour
     }
 
     // Weapon Upgrade
+    public void OnUpgradeClick()
+    {
+        // 
+    }
+
+    // Update Character Information
+    public void UpdateMenu()
+    {
+        // Weapon
+        weaponSprite.sprite = GameManager.instance.weaponSprites[0];
+        upgradeCostText.text = "NOTIMPLEMENTED";
+
+        // Meta
+        levelText.text = "NOT IMPLEMENTED";
+        hitpointText.text = GameManager.instance.player.hitpoint.ToString();
+        goldText.text = GameManager.instance.gold.ToString();
+
+        // xp Bar
+        xpText.text = "NOT IMPLEMENTED";
+        xpBar.localScale = new Vector3(0.5f, 0, 0);
+    }
 }
