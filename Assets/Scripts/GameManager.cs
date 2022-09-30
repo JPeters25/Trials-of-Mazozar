@@ -48,7 +48,18 @@ public class GameManager : MonoBehaviour
     // Upgrade Weapon
     public bool TryUpgradeWeapon()
     {
+        // is the weapon max level?
+        if (weaponPrices.Count <= weapon.weaponLevel)
+            return false;
 
+        if(gold >= weaponPrices[weapon.weaponLevel])
+        {
+            gold -= weaponPrices[weapon.weaponLevel];
+            weapon.UpgradeWeapon();
+            return true;
+        }
+
+        return false;
     }
 
     // Save State
@@ -65,7 +76,7 @@ public class GameManager : MonoBehaviour
         s += "0" + "|";
         s += gold.ToString() + "|";
         s += experience.ToString() + "|";
-        s += "0";
+        s += weapon.weaponLevel.ToString();
 
         PlayerPrefs.SetString("SaveState", s);
     }
@@ -81,6 +92,7 @@ public class GameManager : MonoBehaviour
         gold = int.Parse(data[1]);
         experience = int.Parse(data[2]);
         // CHange the weapon level
+        weapon.SetWeaponLevel(int.Parse(data[3]));
 
         Debug.Log("LoadState");
     }
