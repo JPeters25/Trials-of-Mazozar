@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
         instance = this;
         SceneManager.sceneLoaded += LoadState;
         DontDestroyOnLoad(gameObject);
-       
+
     }
 
     // Resources
@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
         if (weaponPrices.Count <= weapon.weaponLevel)
             return false;
 
-        if(gold >= weaponPrices[weapon.weaponLevel])
+        if (gold >= weaponPrices[weapon.weaponLevel])
         {
             gold -= weaponPrices[weapon.weaponLevel];
             weapon.UpgradeWeapon();
@@ -62,6 +62,50 @@ public class GameManager : MonoBehaviour
         return false;
     }
 
+
+    // Experience System
+    public int GetCurrentLevel()
+    {
+        int r = 0;
+        int add = 0;
+
+        while (experience >= add)
+        {
+            add += xpTable[r];
+            r++;
+
+            if (r == xpTable.Count) // Max level
+                return r;
+        }
+
+        return r;
+    }
+    public int GetXpToLevel(int level)
+    {
+        int r = 0;
+        int xp = 0;
+
+        while (r <  level)
+        {
+            xp += xpTable[r];
+            r++;
+        }
+
+        return xp;
+    }
+    public void GrantXp(int xp)
+    {
+        int currLevel = GetCurrentLevel();
+        experience += xp;
+        if (currLevel < GetCurrentLevel())
+            OnLevelUp();
+    }
+
+    public void OnLevelUp()
+    {
+        Debug.Log("Level Up!");
+    }
+  
     // Save State
     /*
      * INT preferedSkin
@@ -80,7 +124,6 @@ public class GameManager : MonoBehaviour
 
         PlayerPrefs.SetString("SaveState", s);
     }
-
     public void LoadState(Scene s, LoadSceneMode mode)
     {
         if (!PlayerPrefs.HasKey("SaveState"))
