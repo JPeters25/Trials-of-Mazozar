@@ -1550,7 +1550,7 @@ TextureImporter:
       name: pillar_0
       rect:
         serializedVersion: 2
-        x: 207
+        x: 208
         y: 34
         width: 16
         height: 16
@@ -2827,6 +2827,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: boss_0
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 48
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe45b1e72eede04cb413a6a013ee94b
+      internalID: -215621816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -2932,6 +2953,7 @@ TextureImporter:
       torch_3: -1173789992
       crate_3: 298287976
       torch_4: 1974044605
+      boss_0: -215621816
       banner_red: 135491180
       crate_0: 1799776829
       torch_1: -6848405
