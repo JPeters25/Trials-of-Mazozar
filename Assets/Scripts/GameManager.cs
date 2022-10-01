@@ -100,10 +100,9 @@ public class GameManager : MonoBehaviour
         if (currLevel < GetCurrentLevel())
             OnLevelUp();
     }
-
     public void OnLevelUp()
     {
-        Debug.Log("Level Up!");
+        player.OnLevelUp();
     }
   
     // Save State
@@ -132,9 +131,16 @@ public class GameManager : MonoBehaviour
         string[] data = PlayerPrefs.GetString("SaveState").Split('|');
 
         // Change player skin
+
+        // Save Gold
         gold = int.Parse(data[1]);
+
+        // Experience
         experience = int.Parse(data[2]);
-        // CHange the weapon level
+        if(GetCurrentLevel() != 1)
+        player.SetLevel(GetCurrentLevel());
+
+        // Change the weapon level
         weapon.SetWeaponLevel(int.Parse(data[3]));
 
         Debug.Log("LoadState");
