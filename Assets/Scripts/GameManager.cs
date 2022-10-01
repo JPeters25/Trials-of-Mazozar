@@ -144,5 +144,8 @@ public class GameManager : MonoBehaviour
         weapon.SetWeaponLevel(int.Parse(data[3]));
 
         Debug.Log("LoadState");
+
+        // Spawn Zone
+        player.transform.position = GameObject.Find("SpawnPoint").transform.position;
     }
 }

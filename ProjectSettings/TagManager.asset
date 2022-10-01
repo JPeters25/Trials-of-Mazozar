@@ -45,8 +45,8 @@ TagManager:
   - name: Floor
     uniqueID: 1767483899
     locked: 0
-  - name: Actor
-    uniqueID: 1682818417
+  - name: Walls
+    uniqueID: 2123071931
     locked: 0
   - name: Design
     uniqueID: 4136277747
@@ -56,4 +56,10 @@ TagManager:
     locked: 0
   - name: Weapon
     uniqueID: 796080691
+    locked: 0
+  - name: Actor
+    uniqueID: 1682818417
+    locked: 0
+  - name: Other
+    uniqueID: 1374255645
     locked: 0
