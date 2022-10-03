@@ -2836,7 +2836,7 @@ TextureImporter:
         width: 20
         height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2844,6 +2844,48 @@ TextureImporter:
       bones: []
       spriteID: fbe45b1e72eede04cb413a6a013ee94b
       internalID: -215621816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_26
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31fe1f5187119fb4ebcaa698fb1ed0a2
+      internalID: -1550278170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fireball_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 012b579bdbf4c004cbe78db18f9cef5a
+      internalID: -222970551
       vertices: []
       indices: 
       edges: []
@@ -2867,6 +2909,7 @@ TextureImporter:
       weapon_2: -461908833
       torch_0: 1441988467
       wallShadow_14: -2111945240
+      fireball_0: -222970551
       enemy_9: -1887813234
       enemy_7: 1545608751
       healthFountain_1: 1982269902
@@ -2974,6 +3017,7 @@ TextureImporter:
       enemy_17: -582015515
       banner_yellow: -42971667
       floor_8: -1730068116
+      enemy_26: -1550278170
       floor_11: -1291388536
       player_9: 1700176425
       wallShadow_12: 1052079151
