@@ -1,6 +1,9 @@
 # Trials-of-Mazozar
 Capstone Project- 2D Top Down RPG Dungeon Crawler
 
+<img src = "images/mazozar_front.png" alt="Video game cover front">
+<img src = "images/mazozar_back.png" alt="Video game cover back">
+
 ## Resarch Materials
 * Youtube Video https://youtu.be/b8YUfee_pzc
 
