@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     public Weapon weapon;
     public FloatingTextManager floatingTextManager;
     public RectTransform hitpointBar;
+    public Animator deathMenuAnim;
     public GameObject hud;
     public GameObject menu;
     public Text hitpointText;
@@ -132,6 +133,22 @@ public class GameManager : MonoBehaviour
         OnHitpointChange();
     }
   
+  
+
+    // On Scene Loaded
+    public void OnSceneLoaded(Scene s, LoadSceneMode mode)
+    {
+        player.transform.position = GameObject.Find("SpawnPoint").transform.position;
+    }
+
+    // Death Menu and Respawn
+    public void Respawn()
+    {
+        deathMenuAnim.SetTrigger("Hide");
+        SceneManager.LoadScene("Main");
+        player.Respawn();
+    }
+
     // Save State
     /*
      * INT preferedSkin
@@ -139,12 +156,6 @@ public class GameManager : MonoBehaviour
      * INT experience
      * INT weaponLevel
      */
-
-    // On Scene Loaded
-    public void OnSceneLoaded(Scene s, LoadSceneMode mode)
-    {
-        player.transform.position = GameObject.Find("SpawnPoint").transform.position;
-    }
     public void SaveState()
     {
         string s = "";
