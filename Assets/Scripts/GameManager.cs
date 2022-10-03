@@ -147,6 +147,7 @@ public class GameManager : MonoBehaviour
         deathMenuAnim.SetTrigger("Hide");
         SceneManager.LoadScene("Main");
         player.Respawn();
+        gold = 0;
     }
 
     // Save State
