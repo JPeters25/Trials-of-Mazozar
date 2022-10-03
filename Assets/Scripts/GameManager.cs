@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         }
 
         // Restarting Game
-        PlayerPrefs.DeleteAll();
+        // PlayerPrefs.DeleteAll();
 
         instance = this;
         SceneManager.sceneLoaded += OnSceneLoaded;
