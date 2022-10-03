@@ -2,28 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+   
     private void Awake()
     {
+        
         if (GameManager.instance != null)
         {
             Destroy(gameObject);
             Destroy(player.gameObject);
             Destroy(floatingTextManager.gameObject);
+            Destroy(hud);
+            Destroy(menu);
             return;
         }
 
         // Restarting Game
-        // PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteAll();
 
         instance = this;
-        SceneManager.sceneLoaded += LoadState;
-        DontDestroyOnLoad(gameObject);
-
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     // Resources
@@ -36,10 +39,17 @@ public class GameManager : MonoBehaviour
     public Player player;
     public Weapon weapon;
     public FloatingTextManager floatingTextManager;
+    public RectTransform hitpointBar;
+    public GameObject hud;
+    public GameObject menu;
+    public Text hitpointText;
+
+
 
     // Logic
     public int gold;
     public int experience;
+    public int health;
 
     // Floating Text
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
@@ -62,6 +72,20 @@ public class GameManager : MonoBehaviour
         }
 
         return false;
+    }
+
+    // Hitpoint Bar
+    public void OnHitpointChange()
+    {
+        float ratio = (float)player.hitpoint / (float)player.maxHitpoint;
+        hitpointBar.localScale = new Vector3(ratio, 1, 1);
+        hitpointText.text = GameManager.instance.player.hitpoint.ToString() + " / " + GameManager.instance.player.maxHitpoint.ToString();
+
+    }
+
+    public void Update()
+    {
+        hitpointText.text = GameManager.instance.player.hitpoint.ToString() + " / " + GameManager.instance.player.maxHitpoint.ToString();
     }
 
 
@@ -105,6 +129,7 @@ public class GameManager : MonoBehaviour
     public void OnLevelUp()
     {
         player.OnLevelUp();
+        OnHitpointChange();
     }
   
     // Save State
@@ -114,6 +139,12 @@ public class GameManager : MonoBehaviour
      * INT experience
      * INT weaponLevel
      */
+
+    // On Scene Loaded
+    public void OnSceneLoaded(Scene s, LoadSceneMode mode)
+    {
+        player.transform.position = GameObject.Find("SpawnPoint").transform.position;
+    }
     public void SaveState()
     {
         string s = "";
@@ -127,6 +158,9 @@ public class GameManager : MonoBehaviour
     }
     public void LoadState(Scene s, LoadSceneMode mode)
     {
+
+        SceneManager.sceneLoaded -= LoadState;
+
         if (!PlayerPrefs.HasKey("SaveState"))
             return;
 
@@ -134,6 +168,7 @@ public class GameManager : MonoBehaviour
 
         // Change player skin
 
+        
         // Save Gold
         gold = int.Parse(data[1]);
 
@@ -147,7 +182,5 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("LoadState");
 
-        // Spawn Zone
-        player.transform.position = GameObject.Find("SpawnPoint").transform.position;
     }
 }
