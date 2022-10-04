@@ -6,7 +6,7 @@ public class NPCText : Collidable
 {
     public string message;
 
-    private float cooldown = 5.0f;
+    private float cooldown = 0.01f;
     private float lastShout;
 
     protected override void Start()
@@ -21,7 +21,7 @@ public class NPCText : Collidable
         {
             lastShout = Time.time;
      
-        GameManager.instance.ShowText(message, 16, Color.white, transform.position + new Vector3(0,0.26f,0), Vector3.zero, cooldown);
+        GameManager.instance.ShowText(message, 26, Color.white, transform.position + new Vector3(0,0.10f,0), Vector3.zero, cooldown);
         }
     }
 }
