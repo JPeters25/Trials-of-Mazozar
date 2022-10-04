@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CharacterMenu : MonoBehaviour
 {
@@ -13,6 +14,12 @@ public class CharacterMenu : MonoBehaviour
     public Image characterSelectionSprite;
     public Image weaponSprite;
     public RectTransform xpBar;
+    
+    // Exit Game
+    public void OnExitClick()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 
     // Character Selection
     public void OnArrowClick(bool right)
