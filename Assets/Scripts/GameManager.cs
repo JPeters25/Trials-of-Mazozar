@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
     public FloatingTextManager floatingTextManager;
     public RectTransform hitpointBar;
     public Animator deathMenuAnim;
+    public Animator npcTextAnim;
     public GameObject hud;
     public GameObject menu;
     public Text hitpointText;
