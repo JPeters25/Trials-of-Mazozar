@@ -3,11 +3,10 @@ Capstone Project- 2D Top Down RPG Dungeon Crawler
 ![mazozar_front](https://user-images.githubusercontent.com/101532675/193517686-9b06ce7e-4670-4515-9188-bf2f27b86174.png)
 ![mazozar_back](https://user-images.githubusercontent.com/101532675/193517696-266647c7-4506-40c5-b207-06e361dfe5b7.png)
 
-<img src = "images/mazozar_front.png" alt="Video game cover front">
-<img src = "images/mazozar_back.png" alt="Video game cover back">
-
 ## Resarch Materials
-* Youtube Video https://youtu.be/b8YUfee_pzc
+
+* Youtube Video https://youtu.be/b8YUfee_pzc - for overall game 
+* Youtube Video https://www.youtube.com/watch?v=zc8ac_qUXQY - Starting menu 
 
 ## Capstone Proposal Form
 * Link to the proposal form https://docs.google.com/document/d/1meQr5ABfyc-sH8GJmPvaCW_xA_FuIGVcOSxgUlp3ip8/edit?usp=sharing

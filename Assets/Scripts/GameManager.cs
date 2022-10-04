@@ -150,6 +150,12 @@ public class GameManager : MonoBehaviour
         gold = 0;
     }
 
+    // Exit Game
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
     // Save State
     /*
      * INT preferedSkin
