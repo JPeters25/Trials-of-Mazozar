@@ -27,10 +27,4 @@ public class NPCText : Collidable
             GameManager.instance.ShowText(message, 26, Color.white, transform.position + new Vector3(0, 0.10f, 0), Vector3.zero, cooldown);
         }
     }
-
-    protected void QuestText()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        GameManager.instance.npcTextAnim.SetTrigger("Show");
-    }
 }
