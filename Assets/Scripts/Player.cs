@@ -32,6 +32,7 @@ public class Player : Mover
     {
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
+        
 
         if(isAlive)
             UpdateMotor(new Vector3(x, y, 0));
