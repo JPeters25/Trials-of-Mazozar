@@ -3,6 +3,18 @@ Capstone Project- 2D Top Down RPG Dungeon Crawler
 ![mazozar_front](https://user-images.githubusercontent.com/101532675/193517686-9b06ce7e-4670-4515-9188-bf2f27b86174.png)
 ![mazozar_back](https://user-images.githubusercontent.com/101532675/193517696-266647c7-4506-40c5-b207-06e361dfe5b7.png)
 
+## Description
+Trials of Mazozar is a Top Down 2D dungeon crawler game. The player controls the character and fights enemies and clear the dungeon. The Player can level up by earning Experience Points and players can also collect gold and spend the gold to upgrade their weapon.
+
+## Getting Started
+### Prerequisites
+* Latest version of Unity that can be downloaded from [here](https://unity3d.com/get-unity/download)
+* The game was tested on Windows.
+
+## Running the Game
+* Open the soltion with a supported Unity3D Game Engine.
+* Start the "mainMenu" scene from the scenes folder.
+
 ## Resarch Materials
 
 * Youtube Video https://youtu.be/b8YUfee_pzc - for overall game 
